@@ -1,0 +1,8 @@
+def solution(A):
+
+    for number in A:
+
+        count = A.count(number)
+
+        if count % 2 != 0:
+            return number
