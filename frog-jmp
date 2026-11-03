@@ -1,0 +1,13 @@
+def solution(X, Y, D):
+
+    jumps = 0
+
+    position = X
+
+    while position < Y:
+
+        position += D
+
+        jumps += 1
+
+    return jumps
