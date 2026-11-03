@@ -1,0 +1,80 @@
+PSEUDOCODE
+
+====================================
+PROBLEM 1: Cyclic Rotation
+
+FUNCTION solution(A, K)
+    IF list A is empty
+        RETURN A
+    END IF
+
+    REPEAT K times
+        REMOVE last element from A
+        STORE in a variable -> last
+        INSERT last at the beginning of A
+    END REPEAT
+
+    RETURN A
+END FUNCTION
+
+
+====================================
+PROBLEM 2: OddOccurrencesInArray
+
+FUNCTION solution(A)
+    FOR each number in A
+        COUNT # of times number appears in A
+
+        IF COUNT is odd
+            RETURN number
+        END IF
+    END FOR
+END FUNCTION
+
+====================================
+PROBLEM 3: FrogJmp
+
+FUNCTION solution(X, Y, D)
+    SET jumps = 0
+    SET position = X
+
+    WHILE position < Y
+        INCREASE position by D
+        INCREASE jumps by 1
+    END WHILE
+
+    RETURN jump
+END FUNCTION
+
+====================================
+PROBLEM 4: PermMissingElem
+
+FUNCTION solution(A)
+    SET N = length of A
+    SET expected_sum = (N+1)*(N+2) ÷ 2
+    SET actual_sum = 0
+
+    FOR each number in A
+        ADD number to actual_sum
+    END FOR
+
+    RETURN expected_sum - actual_sum
+END FUNCTION
+
+====================================
+PROBLEM 5: TapeEquilibrium
+
+FUNCTION solution(A)
+    SET total_sum = sum of all elements in A
+    SET left_sum = 0
+    SET min_difference = infinity
+
+    FOR P from 1 to length of A - 1
+        ADD A[P-1] to left_sum
+        SET right_sum = total_sum - left_sum
+        SET difference = ABS(left_sum - right_sum)
+
+        IF difference < min_difference
+            SET min_difference = difference
+        END IF
+    END FOR
