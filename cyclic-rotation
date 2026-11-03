@@ -1,0 +1,17 @@
+def solution(A, K):
+
+    # Return the list if it is empty
+    if len(A) == 0:
+        return A
+
+    # Rotate the list K times
+    for i in range(K):
+
+        # Remove the last element
+        last = A.pop()
+
+        # Insert it at the beginning
+        A.insert(0, last)
+
+    # Return the rotated list
+    return A
